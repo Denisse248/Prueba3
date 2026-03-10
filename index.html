@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pétalos de Ensueño · Floristería Artesanal</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+     ════════════════════════════════════════ -->
+<nav id="navbar">
+  <a class="nav-logo" onclick="showPage('inicio')">
+    <div class="nav-logo-icon">🌸</div>
+    Pétalos de Ensueño
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+</nav>
+
+<!-- Overlay del menú -->
+<div class="overlay" id="overlay"></div>
+
+<!-- ════════════════════════════════════════
+     MENÚ DESLIZANTE
+     ════════════════════════════════════════ -->
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menú principal">
+  <div class="menu-header">
+    <div class="menu-brand">🌸 Pétalos de Ensueño</div>
+    <button class="menu-close" id="menuClose" aria-label="Cerrar menú">✕</button>
+  </div>
+  <div class="menu-links">
+    <a onclick="showPage('inicio')"   data-page="inicio">  <span class="link-icon">🏠</span>Inicio</a>
+    <a onclick="showPage('catalogo')" data-page="catalogo"><span class="link-icon">🌹</span>Catálogo</a>
+    <a onclick="showPage('nosotros')" data-page="nosotros"><span class="link-icon">💐</span>Sobre Nosotros</a>
+    <a onclick="showPage('contacto')" data-page="contacto"><span class="link-icon">📞</span>Contacto</a>
+  </div>
+  <div class="menu-footer">🌿 Flores frescas seleccionadas cada día</div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     PÁGINA: INICIO
+     ════════════════════════════════════════ -->
+<div id="inicio-page" class="page active">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+
+    <div class="hero-content">
+      <div class="logo-hero">
+        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="60" cy="60" r="58" fill="#fce8ef" stroke="#f2a7b8" stroke-width="1.5"/>
+          <ellipse cx="60" cy="34" rx="10" ry="18" fill="#f2a7b8" opacity=".9"  transform="rotate(0   60 60)"/>
+          <ellipse cx="60" cy="34" rx="10" ry="18" fill="#f0a0b2" opacity=".8"  transform="rotate(40  60 60)"/>
+          <ellipse cx="60" cy="34" rx="10" ry="18" fill="#e8899e" opacity=".75" transform="rotate(80  60 60)"/>
+          <ellipse cx="60" cy="34" rx="10" ry="18" fill="#e8899e" opacity=".7"  transform="rotate(120 60 60)"/>
+          <ellipse cx="60" cy="34" rx="10" ry="18" fill="#f2a7b8" opacity=".85" transform="rotate(160 60 60)"/>
+          <ellipse cx="60" cy="34" rx="10" ry="18" fill="#f2a7b8" opacity=".75" transform="rotate(200 60 60)"/>
+          <ellipse cx="60" cy="34" rx="10" ry="18" fill="#e8899e" opacity=".7"  transform="rotate(240 60 60)"/>
+          <ellipse cx="60" cy="34" rx="10" ry="18" fill="#e8899e" opacity=".65" transform="rotate(280 60 60)"/>
+          <ellipse cx="60" cy="34" rx="10" ry="18" fill="#f2a7b8" opacity=".6"  transform="rotate(320 60 60)"/>
+          <circle cx="60" cy="60" r="14" fill="#d9708a"/>
+          <circle cx="60" cy="60" r="8"  fill="#f7c3d0"/>
+          <circle cx="60" cy="60" r="4"  fill="#fff" opacity=".6"/>
+          <path d="M60 74 Q44 90 42 104 Q56 99 63 83 Z" fill="#7a9e7e" opacity=".85"/>
+          <path d="M60 74 Q76 90 78 104 Q64 99 57 83 Z" fill="#5e8862" opacity=".65"/>
+        </svg>
+      </div>
+
+      <p class="tagline">
+        <span class="tagline-line"></span>Floristería artesanal<span class="tagline-line"></span>
+      </p>
+      <h1 class="hero-title">Flores que<br><em>hablan por ti</em></h1>
+      <p class="hero-sub">Arreglos únicos elaborados con flores frescas, seleccionadas cada día con amor y dedicación.</p>
+
+      <div class="hero-cta">
+        <button class="btn btn-solid" onclick="openModal()">🌸 Ver catálogo completo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mini catálogo destacado -->
+  <section class="mini-section">
+    <p class="section-eyebrow">Nuestra colección</p>
+    <h2 class="section-heading">Arreglos <em>destacados</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="mini-grid">
+      <div class="flower-card">
+        <div class="card-img"><img src="64526.111149.jpg" alt="Ramo Pasión Eterna" loading="lazy"/></div>
+        <div class="card-body">
+          <span class="card-cat">Romántico</span>
+          <div class="card-name">Ramo Pasión Eterna</div>
+          <div class="card-desc">12 rosas rojas premium envueltas en papel kraft con cinta de satén dorada.</div>
+          <div class="card-footer"><span class="card-price">Desde $25.00</span><span class="card-tag">San Valentín · Aniversario</span></div>
+        </div>
+      </div>
+
+      <div class="flower-card">
+        <div class="card-img"><img src="IMG_0189.jpg" alt="Alegría en Colores" loading="lazy"/></div>
+        <div class="card-body">
+          <span class="card-cat">Cumpleaños</span>
+          <div class="card-name">Alegría en Colores</div>
+          <div class="card-desc">Mezcla vibrante de gerberas, girasoles y margaritas con follaje tropical.</div>
+          <div class="card-footer"><span class="card-price">Desde $20.00</span><span class="card-tag">Cumpleaños · Celebración</span></div>
+        </div>
+      </div>
+
+      <div class="flower-card">
+        <div class="card-img"><img src="cf708abb6e46f2e89f400f60c6855581.jpg" alt="Centro Mesa Nupcial" loading="lazy"/></div>
+        <div class="card-body">
+          <span class="card-cat">Bodas &amp; Eventos</span>
+          <div class="card-name">Centro Mesa Nupcial</div>
+          <div class="card-desc">Diseño elegante con peonías, eucalipto y flores silvestres en base de cristal.</div>
+          <div class="card-footer"><span class="card-price">Desde $45.00</span><span class="card-tag">Bodas · Eventos</span></div>
+        </div>
+      </div>
+
+      <div class="flower-card">
+        <div class="card-img"><img src="619OGB5gVsL._AC_UF894,1000_QL80_.jpg" alt="Orquídea Phalaenopsis" loading="lazy"/></div>
+        <div class="card-body">
+          <span class="card-cat">Plantas</span>
+          <div class="card-name">Orquídea Phalaenopsis</div>
+          <div class="card-desc">Planta de larga duración presentada en elegante maceta de cerámica blanca.</div>
+          <div class="card-footer"><span class="card-price">Desde $30.00</span><span class="card-tag">Hogar · Oficina</span></div>
+        </div>
+      </div>
+
+      <div class="flower-card">
+        <div class="card-img"><img src="imagen-de-whatsapp-2025-07-16-a-las-11.27.10_84521f26-YrDJbM8JJXt9o7Ba.avif" alt="Corona Serenidad" loading="lazy"/></div>
+        <div class="card-body">
+          <span class="card-cat">Homenajes</span>
+          <div class="card-name">Corona Serenidad</div>
+          <div class="card-desc">Arreglo solemne elaborado en tonos blancos y verdes naturales con lirios.</div>
+          <div class="card-footer"><span class="card-price">Desde $55.00</span><span class="card-tag">Homenaje · Serenidad</span></div>
+        </div>
+      </div>
+
+      <div class="flower-card">
+        <div class="card-img"><img src="caja_deluxe_rosas_ros_flores_america.jpg" alt="Caja Floral Deluxe" loading="lazy"/></div>
+        <div class="card-body">
+          <span class="card-cat">Sorpresa</span>
+          <div class="card-name">Caja Floral Deluxe</div>
+          <div class="card-desc">Elegante caja kraft con rosas, tulipanes y detalles personalizados.</div>
+          <div class="card-footer"><span class="card-price">Desde $35.00</span><span class="card-tag">Regalo · Sorpresa</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <strong>🌸 Pétalos de Ensueño</strong><span class="dot">·</span>Flores que hablan por ti<span class="dot">·</span>© 2026
+  </footer>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     PÁGINA: CATÁLOGO
+     ════════════════════════════════════════ -->
+<div id="catalogo-page" class="page">
+  <p class="section-eyebrow">Explora</p>
+  <h2 class="section-heading">Nuestro <em>Catálogo</em></h2>
+  <div class="section-divider"></div>
+
+  <div class="cat-filters">
+    <button class="cat-btn active" onclick="filterCat(this,'all')">🌸 Todos</button>
+    <button class="cat-btn" onclick="filterCat(this,'romantico')">🌹 Románticos</button>
+    <button class="cat-btn" onclick="filterCat(this,'cumple')">🎂 Cumpleaños</button>
+    <button class="cat-btn" onclick="filterCat(this,'boda')">🎊 Eventos</button>
+    <button class="cat-btn" onclick="filterCat(this,'planta')">🪴 Plantas</button>
+    <button class="cat-btn" onclick="filterCat(this,'exotico')">🌺 Exóticas</button>
+    <button class="cat-btn" onclick="filterCat(this,'homenaje')">🕊️ Homenajes</button>
+  </div>
+
+  <div class="catalog-grid" id="catalogGrid"></div>
+
+  <footer class="site-footer" style="margin-top:70px">
+    <strong>🌸 Pétalos de Ensueño</strong><span class="dot">·</span>Flores que hablan por ti<span class="dot">·</span>© 2026
+  </footer>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     PÁGINA: SOBRE NOSOTROS
+     ════════════════════════════════════════ -->
+<div id="nosotros-page" class="page">
+  <div class="about-wrap">
+    <p class="section-eyebrow">Nuestra historia</p>
+    <h2 class="section-heading">Sobre <em>Nosotros</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="about-hero-img">
+      <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&auto=format&fit=crop&q=85" alt="Taller Pétalos de Ensueño" loading="lazy"/>
+    </div>
+
+    <div class="about-story">
+      <p>En <strong>Pétalos de Ensueño</strong> creamos arreglos florales artesanales con flores frescas seleccionadas diariamente. Cada ramo es una obra de arte pensada con el corazón, porque creemos que las flores tienen el poder de transformar cualquier momento en un recuerdo eterno.</p>
+      <blockquote>"Cada flor que ponemos en tus manos lleva consigo un pedazo de nuestro corazón."</blockquote>
+      <p>Fundada con la pasión de ayudar a las personas a expresar sus sentimientos más profundos, nuestra floristería nació del amor por la naturaleza y el diseño artesanal. Trabajamos con <strong>proveedores locales comprometidos con la sostenibilidad</strong>, garantizando frescura y calidad en cada creación.</p>
+      <p>Desde un sencillo ramo de cumpleaños hasta una decoración completa para bodas, eventos corporativos, bautizos y ceremonias fúnebres, ponemos el mismo cuidado y dedicación en cada uno de nuestros arreglos.</p>
+    </div>
+
+    <!-- Equipo -->
+    <div class="team-grid">
+
+  <!-- Ana Sofía – Rosa Rosada -->
+  <div class="team-card">
+    <div class="tc-img">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;border-radius:50%;display:block;">
+        <defs>
+          <radialGradient id="bg1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fff0f5"/><stop offset="100%" stop-color="#f8ccd8"/></radialGradient>
+          <radialGradient id="p1a" cx="40%" cy="40%" r="60%"><stop offset="0%" stop-color="#fbadc0"/><stop offset="100%" stop-color="#e0627f"/></radialGradient>
+          <radialGradient id="p1b" cx="40%" cy="40%" r="60%"><stop offset="0%" stop-color="#f9c4d0"/><stop offset="100%" stop-color="#e87896"/></radialGradient>
+          <radialGradient id="p1c" cx="40%" cy="40%" r="60%"><stop offset="0%" stop-color="#fce0e8"/><stop offset="100%" stop-color="#f2a0b8"/></radialGradient>
+        </defs>
+        <circle cx="100" cy="100" r="100" fill="url(#bg1)"/>
+        <path d="M100 155 Q97 170 95 185" stroke="#5e8862" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M98 168 Q84 158 80 148 Q93 152 98 168Z" fill="#7a9e7e"/>
+        <path d="M97 175 Q112 168 115 157 Q104 162 97 175Z" fill="#5e8862"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p1c)" transform="rotate(-40 100 100)" opacity="0.85"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p1c)" transform="rotate(40 100 100)" opacity="0.85"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p1c)" transform="rotate(120 100 100)" opacity="0.8"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p1c)" transform="rotate(-120 100 100)" opacity="0.8"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p1b)" transform="rotate(-20 100 100)" opacity="0.92"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p1b)" transform="rotate(20 100 100)" opacity="0.92"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p1b)" transform="rotate(100 100 100)" opacity="0.88"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p1b)" transform="rotate(-100 100 100)" opacity="0.88"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p1a)" transform="rotate(0 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p1a)" transform="rotate(72 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p1a)" transform="rotate(144 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p1a)" transform="rotate(216 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p1a)" transform="rotate(288 100 100)"/>
+        <circle cx="100" cy="100" r="12" fill="#c94f6a"/>
+        <circle cx="100" cy="100" r="7" fill="#e8849a"/>
+        <circle cx="100" cy="100" r="3" fill="#fff" opacity="0.5"/>
+        <circle cx="93" cy="93" r="2" fill="white" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="tc-name">Karla</div><div class="tc-role">Directora Creativa</div>
+  </div>
+
+  <!-- María José – Rosa Blanca -->
+  <div class="team-card">
+    <div class="tc-img">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;border-radius:50%;display:block;">
+        <defs>
+          <radialGradient id="bg2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#e8f0e9"/></radialGradient>
+          <radialGradient id="p2a" cx="40%" cy="30%" r="70%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#d0ddd1"/></radialGradient>
+          <radialGradient id="p2b" cx="40%" cy="30%" r="70%"><stop offset="0%" stop-color="#f5f9f5"/><stop offset="100%" stop-color="#bfcfc0"/></radialGradient>
+          <radialGradient id="p2c" cx="40%" cy="30%" r="70%"><stop offset="0%" stop-color="#eef5ee"/><stop offset="100%" stop-color="#adc0ae"/></radialGradient>
+        </defs>
+        <circle cx="100" cy="100" r="100" fill="url(#bg2)"/>
+        <path d="M100 155 Q97 170 95 185" stroke="#5e8862" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M98 168 Q84 158 80 148 Q93 152 98 168Z" fill="#7a9e7e"/>
+        <path d="M97 175 Q112 168 115 157 Q104 162 97 175Z" fill="#5e8862"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p2c)" transform="rotate(-40 100 100)" opacity="0.85"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p2c)" transform="rotate(40 100 100)" opacity="0.85"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p2c)" transform="rotate(120 100 100)" opacity="0.8"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p2c)" transform="rotate(-120 100 100)" opacity="0.8"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p2b)" transform="rotate(-20 100 100)" opacity="0.92"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p2b)" transform="rotate(20 100 100)" opacity="0.92"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p2b)" transform="rotate(100 100 100)" opacity="0.88"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p2b)" transform="rotate(-100 100 100)" opacity="0.88"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p2a)" transform="rotate(0 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p2a)" transform="rotate(72 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p2a)" transform="rotate(144 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p2a)" transform="rotate(216 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p2a)" transform="rotate(288 100 100)"/>
+        <circle cx="100" cy="100" r="12" fill="#8aab8c"/>
+        <circle cx="100" cy="100" r="7" fill="#b5ccb7"/>
+        <circle cx="100" cy="100" r="3" fill="#fff" opacity="0.7"/>
+        <circle cx="93" cy="93" r="2" fill="white" opacity="0.6"/>
+      </svg>
+    </div>
+    <div class="tc-name">Raquel</div><div class="tc-role">Florista</div>
+  </div>
+
+  <!-- Claudia R. – Rosa Morada -->
+  <div class="team-card">
+    <div class="tc-img">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;border-radius:50%;display:block;">
+        <defs>
+          <radialGradient id="bg3" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#f5eeff"/><stop offset="100%" stop-color="#d8c0f0"/></radialGradient>
+          <radialGradient id="p3a" cx="40%" cy="30%" r="70%"><stop offset="0%" stop-color="#c080e8"/><stop offset="100%" stop-color="#7a30b0"/></radialGradient>
+          <radialGradient id="p3b" cx="40%" cy="30%" r="70%"><stop offset="0%" stop-color="#d4a0f0"/><stop offset="100%" stop-color="#9040c8"/></radialGradient>
+          <radialGradient id="p3c" cx="40%" cy="30%" r="70%"><stop offset="0%" stop-color="#e8c8ff"/><stop offset="100%" stop-color="#b070d8"/></radialGradient>
+        </defs>
+        <circle cx="100" cy="100" r="100" fill="url(#bg3)"/>
+        <path d="M100 155 Q97 170 95 185" stroke="#5e8862" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M98 168 Q84 158 80 148 Q93 152 98 168Z" fill="#7a9e7e"/>
+        <path d="M97 175 Q112 168 115 157 Q104 162 97 175Z" fill="#5e8862"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p3c)" transform="rotate(-40 100 100)" opacity="0.85"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p3c)" transform="rotate(40 100 100)" opacity="0.85"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p3c)" transform="rotate(120 100 100)" opacity="0.8"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p3c)" transform="rotate(-120 100 100)" opacity="0.8"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p3b)" transform="rotate(-20 100 100)" opacity="0.92"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p3b)" transform="rotate(20 100 100)" opacity="0.92"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p3b)" transform="rotate(100 100 100)" opacity="0.88"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p3b)" transform="rotate(-100 100 100)" opacity="0.88"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p3a)" transform="rotate(0 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p3a)" transform="rotate(72 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p3a)" transform="rotate(144 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p3a)" transform="rotate(216 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p3a)" transform="rotate(288 100 100)"/>
+        <circle cx="100" cy="100" r="12" fill="#5a1a90"/>
+        <circle cx="100" cy="100" r="7" fill="#9050c0"/>
+        <circle cx="100" cy="100" r="3" fill="#fff" opacity="0.55"/>
+        <circle cx="93" cy="93" r="2" fill="white" opacity="0.45"/>
+      </svg>
+    </div>
+    <div class="tc-name">Sofia</div><div class="tc-role">Diseñadora de Eventos</div>
+  </div>
+
+  <!-- Carlos M. – Rosa Ocre -->
+  <div class="team-card">
+    <div class="tc-img">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;border-radius:50%;display:block;">
+        <defs>
+          <radialGradient id="bg4" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fff8ee"/><stop offset="100%" stop-color="#f0d8a0"/></radialGradient>
+          <radialGradient id="p4a" cx="40%" cy="30%" r="70%"><stop offset="0%" stop-color="#d4901a"/><stop offset="100%" stop-color="#a06010"/></radialGradient>
+          <radialGradient id="p4b" cx="40%" cy="30%" r="70%"><stop offset="0%" stop-color="#e8b040"/><stop offset="100%" stop-color="#c07820"/></radialGradient>
+          <radialGradient id="p4c" cx="40%" cy="30%" r="70%"><stop offset="0%" stop-color="#f4cc70"/><stop offset="100%" stop-color="#d89830"/></radialGradient>
+        </defs>
+        <circle cx="100" cy="100" r="100" fill="url(#bg4)"/>
+        <path d="M100 155 Q97 170 95 185" stroke="#5e8862" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M98 168 Q84 158 80 148 Q93 152 98 168Z" fill="#7a9e7e"/>
+        <path d="M97 175 Q112 168 115 157 Q104 162 97 175Z" fill="#5e8862"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p4c)" transform="rotate(-40 100 100)" opacity="0.85"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p4c)" transform="rotate(40 100 100)" opacity="0.85"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p4c)" transform="rotate(120 100 100)" opacity="0.8"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p4c)" transform="rotate(-120 100 100)" opacity="0.8"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p4b)" transform="rotate(-20 100 100)" opacity="0.92"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p4b)" transform="rotate(20 100 100)" opacity="0.92"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p4b)" transform="rotate(100 100 100)" opacity="0.88"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p4b)" transform="rotate(-100 100 100)" opacity="0.88"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p4a)" transform="rotate(0 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p4a)" transform="rotate(72 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p4a)" transform="rotate(144 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p4a)" transform="rotate(216 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p4a)" transform="rotate(288 100 100)"/>
+        <circle cx="100" cy="100" r="12" fill="#804808"/>
+        <circle cx="100" cy="100" r="7" fill="#c07020"/>
+        <circle cx="100" cy="100" r="3" fill="#fff" opacity="0.5"/>
+        <circle cx="93" cy="93" r="2" fill="white" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="tc-name">Alisson</div><div class="tc-role">Coordinador de Entregas</div>
+  </div>
+
+  <!-- Ca. – Rosa Azul -->
+  <div class="team-card">
+    <div class="tc-img">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;border-radius:50%;display:block;">
+        <defs>
+          <radialGradient id="bg5" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#eef5ff"/><stop offset="100%" stop-color="#b8d0f8"/></radialGradient>
+          <radialGradient id="p5a" cx="40%" cy="30%" r="70%"><stop offset="0%" stop-color="#2060d0"/><stop offset="100%" stop-color="#0830a0"/></radialGradient>
+          <radialGradient id="p5b" cx="40%" cy="30%" r="70%"><stop offset="0%" stop-color="#4888e8"/><stop offset="100%" stop-color="#1848b8"/></radialGradient>
+          <radialGradient id="p5c" cx="40%" cy="30%" r="70%"><stop offset="0%" stop-color="#80b0f8"/><stop offset="100%" stop-color="#3870d0"/></radialGradient>
+        </defs>
+        <circle cx="100" cy="100" r="100" fill="url(#bg5)"/>
+        <path d="M100 155 Q97 170 95 185" stroke="#5e8862" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M98 168 Q84 158 80 148 Q93 152 98 168Z" fill="#7a9e7e"/>
+        <path d="M97 175 Q112 168 115 157 Q104 162 97 175Z" fill="#5e8862"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p5c)" transform="rotate(-40 100 100)" opacity="0.85"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p5c)" transform="rotate(40 100 100)" opacity="0.85"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p5c)" transform="rotate(120 100 100)" opacity="0.8"/>
+        <ellipse cx="100" cy="75" rx="16" ry="28" fill="url(#p5c)" transform="rotate(-120 100 100)" opacity="0.8"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p5b)" transform="rotate(-20 100 100)" opacity="0.92"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p5b)" transform="rotate(20 100 100)" opacity="0.92"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p5b)" transform="rotate(100 100 100)" opacity="0.88"/>
+        <ellipse cx="100" cy="78" rx="13" ry="23" fill="url(#p5b)" transform="rotate(-100 100 100)" opacity="0.88"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p5a)" transform="rotate(0 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p5a)" transform="rotate(72 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p5a)" transform="rotate(144 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p5a)" transform="rotate(216 100 100)"/>
+        <ellipse cx="100" cy="82" rx="10" ry="18" fill="url(#p5a)" transform="rotate(288 100 100)"/>
+        <circle cx="100" cy="100" r="12" fill="#041880"/>
+        <circle cx="100" cy="100" r="7" fill="#1848b0"/>
+        <circle cx="100" cy="100" r="3" fill="#fff" opacity="0.6"/>
+        <circle cx="93" cy="93" r="2" fill="white" opacity="0.5"/>
+      </svg>
+    </div>
+    <div class="tc-name">Paola</div><div class="tc-role">Coordinador de Entregas</div>
+  </div>
+
+</div>
+
+    <!-- Valores -->
+    <div class="sub-block">
+      <p class="section-eyebrow">Lo que nos define</p>
+      <h3 class="sub-heading">Nuestros <em>valores</em></h3>
+      <div class="section-divider" style="margin-bottom:0"></div>
+      <div class="values-grid">
+        <div class="value-card"><div class="value-icon">🌱</div><h4>Flores Frescas</h4>    <p>Seleccionamos las mejores flores cada mañana para garantizar frescura y calidad.</p></div>
+        <div class="value-card"><div class="value-icon">🎨</div><h4>Diseño Artesanal</h4> <p>Cada arreglo es creado a mano con dedicación, creatividad y atención al detalle.</p></div>
+        <div class="value-card"><div class="value-icon">💚</div><h4>Sostenibilidad</h4>  <p>Trabajamos con proveedores locales responsables con el medio ambiente.</p></div>
+        <div class="value-card"><div class="value-icon">✨</div><h4>Personalización</h4> <p>Adaptamos cada arreglo a tus gustos y a la ocasión especial que deseas celebrar.</p></div>
+        <div class="value-card"><div class="value-icon">💬</div><h4>Atención Cercana</h4><p>Te asesoramos personalmente para encontrar el arreglo perfecto.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer" style="margin-top:80px">
+    <strong>🌸 Pétalos de Ensueño</strong><span class="dot">·</span>Flores que hablan por ti<span class="dot">·</span>© 2026
+  </footer>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     PÁGINA: CONTACTO
+     ════════════════════════════════════════ -->
+<div id="contacto-page" class="page">
+  <div class="contact-wrap">
+    <p class="section-eyebrow">Estamos para ti</p>
+    <h2 class="section-heading">Contáctanos</h2>
+    <div class="section-divider"></div>
+
+    <div class="contact-hero-img">
+      <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&auto=format&fit=crop&q=80" alt="Floristería Pétalos de Ensueño" loading="lazy"/>
+    </div>
+
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="c-icon">📱</div>
+        <div class="c-info">
+          <div class="c-label">WhatsApp</div>
+          <div class="c-value"><a href="https://wa.me/50312345678" target="_blank">+503 1234-5678</a></div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon">📞</div>
+        <div class="c-info">
+          <div class="c-label">Teléfono fijo</div>
+          <div class="c-value"><a href="tel:+50321234567">+503 2123-4567</a></div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon">✉️</div>
+        <div class="c-info">
+          <div class="c-label">Correo electrónico</div>
+          <div class="c-value"><a href="mailto:hola@petalosdeesueno.com">hola@petalosdeesueno.com</a></div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon">📍</div>
+        <div class="c-info">
+          <div class="c-label">Dirección</div>
+          <div class="c-value">Calle Las Flores #23, Colonia Primavera, San Salvador</div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon">🕐</div>
+        <div class="c-info">
+          <div class="c-label">Horarios de atención</div>
+          <div class="c-value">
+            Lunes – Sábado: 8:00 a.m. – 7:00 p.m.<br>
+            Domingo: 9:00 a.m. – 2:00 p.m.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-actions">
+      <a href="https://wa.me/50312345678" target="_blank" class="btn-whatsapp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Escribirnos por WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+  <footer class="site-footer" style="margin-top:80px">
+    <strong>🌸 Pétalos de Ensueño</strong><span class="dot">·</span>Flores que hablan por ti<span class="dot">·</span>© 2026
+  </footer>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     MODAL — CATÁLOGO COMPLETO
+     ════════════════════════════════════════ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="modal-close" id="modalCloseBtn" aria-label="Cerrar">✕</button>
+
+    <div class="modal-header">
+      <h2>🌸 Flores para cada <em style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--rose-deep)">ocasión</em></h2>
+      <p>Explora nuestra colección completa.</p>
+    </div>
+
+    <div class="modal-filter">
+      <button class="mf-btn active" onclick="filterModal(this,'all')">Todos</button>
+      <button class="mf-btn" onclick="filterModal(this,'romantico')">Romántico</button>
+      <button class="mf-btn" onclick="filterModal(this,'cumple')">Cumpleaños</button>
+      <button class="mf-btn" onclick="filterModal(this,'boda')">Bodas</button>
+      <button class="mf-btn" onclick="filterModal(this,'planta')">Plantas</button>
+      <button class="mf-btn" onclick="filterModal(this,'exotico')">Exóticas</button>
+      <button class="mf-btn" onclick="filterModal(this,'homenaje')">Homenajes</button>
+    </div>
+
+    <div class="modal-grid" id="modalGrid"></div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     SCRIPTS
+     Orden importante:
+     1. data.js      → arrays de datos
+     2. catalog.js   → usa catalogProducts
+     3. modal.js     → usa modalFlowers
+     4. navigation.js → usa funciones de catalog y modal
+     ════════════════════════════════════════ -->
+<script src="js/data.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/navigation.js"></script>
+
+</body>
+</html>
